@@ -1,0 +1,57 @@
+﻿@page
+@model WebAppProduto.Pages.Produtos.EditModel
+@{
+}
+<h1 class="text-center">Editar Produto</h1>
+<hr />
+
+<form method="post">
+    <div class="row">
+        <input type="hidden" asp-for="Produto.ID" />
+        <div class="col-md-12">
+            <div class="form-group">
+                <label asp-for="Produto.nome" class="control-label">Nome</label>
+                <input asp-for="Produto.nome" class="form-control" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Produto.setor" class="control-label">Setor</label>
+                <input asp-for="Produto.setor" class="form-control" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Produto.tipo" class="control-label">tipo</label>
+                <input asp-for="Produto.tipo" class="form-control" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Produto.quantidade" class="control-label">Quantidade</label>
+                <input asp-for="Produto.quantidade" class="form-control" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Produto.local" class="control-label">Local</label>
+                <input asp-for="Produto.local" class="form-control" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Produto.fornecedor" class="control-label">Fornecedor</label>
+                <input asp-for="Produto.fornecedor" class="form-control" />
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Produto.image" class="control-label">Imagem</label>
+                <input asp-for="Produto.image" class="form-control" />
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+    </div>
+</form>
