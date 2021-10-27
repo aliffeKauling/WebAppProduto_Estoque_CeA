@@ -15,7 +15,7 @@ namespace WebAppProduto.Pages.Produtos
     {
 
         public Produto Produto { get; set; }
-        string baseUrl = "https://localhost:44333/";
+        string baseUrl = "https://localhost:44369/";
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)
