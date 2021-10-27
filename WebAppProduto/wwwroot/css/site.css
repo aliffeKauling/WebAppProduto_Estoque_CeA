@@ -78,3 +78,26 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+.images-create {
+    border: 1px solid #ABB5BE;
+    background-color: #ABB5BE; 
+    border-radius: 5px;
+    width: 200px;
+    height: 150px;
+    margin: 5px;
+}
+
+.btn-deletar-create {
+    margin-right: 15px;
+}
+#group-btn-create {
+    position: relative;
+    top: 50px;
+}
+
+#group-input-create {
+    position: relative;
+    top: 10px;
+    width: 405px;
+}
