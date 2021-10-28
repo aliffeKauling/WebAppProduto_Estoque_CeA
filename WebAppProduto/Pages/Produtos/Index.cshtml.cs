@@ -13,7 +13,7 @@ namespace WebAppProduto.Pages.Produtos
 {
     public class IndexModel : PageModel
     {
-        public List<Produto> Produtos { get; set; }
+        public List<Produto> Produtos { get; private set; }
         string baseUrl = "https://localhost:44333/";
         public async Task OnGetAsync()
         {
