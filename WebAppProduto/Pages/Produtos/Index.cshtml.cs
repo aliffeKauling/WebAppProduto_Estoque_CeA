@@ -14,7 +14,7 @@ namespace WebAppProduto.Pages.Produtos
     public class IndexModel : PageModel
     {
         public List<Produto> Produtos { get; set; }
-        string baseUrl = "https://localhost:44369/";
+        string baseUrl = "https://localhost:44333/";
         public async Task OnGetAsync()
         {
             using (var client = new HttpClient())
