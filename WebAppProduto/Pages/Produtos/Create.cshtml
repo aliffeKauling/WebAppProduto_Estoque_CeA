@@ -14,35 +14,40 @@
             <div class="col-12">
                 <div class="form-group">
                     <label for="nome" class="control-label">Nome</label>
-                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome do produto"/>
+                    <input type="text" class="form-control id="nome" name="nome" placeholder="Nome do produto" required />
                 </div>
             </div>
             <!--Campo setor-->
             <div class="col-md-9">
                 <div class="form-group">
                     <label for="setor" class="control-label">Setor</label>
-                    <input type="text" class="form-control" id="setor" name="setor" placeholder="Setor"/>
+                    <select class="custom-select col-12" aria-label="Selecione o departamento" id="setor" name="setor" required>
+                        <option label="Selecione"></option>
+                        <option value="1">Feminino</option>
+                        <option value="2">Masculino</option>
+                        <option value="3">Infantil</option>
+                    </select>
                 </div>
             </div>
             <!--Campo quantidade-->
             <div class="col-md-3">
                 <div class="form-group">
                     <label for="quantidade" class="control-label">Quantidade</label>
-                    <input type="text" class="form-control" id="quantidade" name="quantidade" placeholder="Qtd"/>
+                    <input type="number" class="form-control" id="quantidade" name="quantidade" placeholder="Qtd" min="1" required/>
                 </div>
             </div>
             <!--Campo local-->
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="local" class="control-label">Local</label>
-                    <input type="text" class="form-control" id="local" name="local" placeholder="Local de armazenamento"/>
+                    <input type="text" class="form-control" id="local" name="local" placeholder="Local de armazenamento" required />
                 </div>
             </div>
             <!--Campo tipo-->
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="tipo" class="control-label">Tipo</label>
-                    <input type="text" class="form-control" id="tipo" name="tipo" placeholder="Tipo"/>
+                    <input type="text" class="form-control" id="tipo" name="tipo" placeholder="Tipo" required />
                 </div>
             </div>
             <!--Campo fornecedor-->
@@ -50,39 +55,47 @@
                 <div class="form-group">
                     <label for="fornecedor" class="control-label">Fornecedor</label>
                     <!--<input type="text" class="form-control" id="fornecedor" name="fornecedor" placeholder=""/>-->
-                    <select class="custom-select col-12" aria-label="Default select example">
-                        <option selected>Selecione</option>
+                    <select class="custom-select col-12" aria-label="Default select example" id="fornecedor" name="fornecedor" required>
+                        <option label="Selecione"></option>
                         <option value="1">Fornecedor 1</option>
                         <option value="2">Fornecedor 2</option>
                         <option value="3">Fornecedor 3</option>
                     </select>
                 </div>
             </div>
-            <!--Campo Descrição-->
-            <div class="col-12">
-                <div class="form-group">
-                    <label for="descricao" class="control-label">Descrição</label>
-                    <textarea class="form-control" id="descricao" name="descricao" placeholder="Descrição do produto"></textarea>
-                </div>
-            </div>
+            <!--Campo Descrição
+    <div class="col-12">
+        <div class="form-group">
+            <label for="descricao" class="control-label">Descrição</label>
+            <textarea class="form-control" id="descricao" name="descricao" placeholder="Descrição do produto"></textarea>
+        </div>
+    </div>-->
 
         </div>
 
         <!--Coluna 2-->
         <div class="col-md-6">
-            <div class="d-flex flex-wrap justify-content-center">
-                <div class="images-create img-fluid"></div>
-                <div class="images-create img-fluid"></div>
-                <div class="images-create img-fluid"></div>
-                <div class="images-create img-fluid"></div>
-            </div>
-            <div class="custom-file" id="group-input-create">
-                <input type="file" class="custom-file-input" id="customFile">
-                <label class="custom-file-label" for="customFile">Escolha seus arquivos</label>
-            </div>
-            <div class="d-md-flex justify-content-md-end" id="group-btn-create">
-                <button type="button" class="btn btn-outline-danger btn-deletar-create">Deletar</button>
-                <input type="submit" value="Criar" class="btn btn-success" />
+            <!--Container geral-->
+            <div class="row .g3">
+                <!--Container imagens-->
+                <div class="d-flex flex-wrap justify-content-center">
+                    <div class="images-create img-fluid"></div>
+                    <div class="images-create img-fluid"></div>
+                    <div class="images-create img-fluid"></div>
+                    <div class="images-create img-fluid"></div>
+                </div>
+                <!--Container Enviar arquivo-->
+                <div class="col-12 d-flex flex-wrap justify-content-center">
+                    <div class="custom-file" id="group-input-create">
+                        <input type="file" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Escolha seus arquivos</label>
+                    </div>
+                </div>
+                <!--Botões Inferiores-->
+                <div class="col-11 d-flex flex-wrap justify-content-end" id="group-btn-create">
+                    <button type="button" class="btn btn-outline-danger btn-deletar-create">Deletar</button>
+                    <input type="submit" value="Criar" class="btn btn-success" />
+                </div>
             </div>
         </div>
     </div>
