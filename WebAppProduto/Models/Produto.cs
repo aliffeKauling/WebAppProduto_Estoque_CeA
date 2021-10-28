@@ -12,7 +12,7 @@ namespace WebAppProduto.Models
         public string setor { get; set; }
         public string local { get; set; }
         public string tipo { get; set; }
-        public double quantidade { get; set; }
+        public int quantidade { get; set; }
         public string fornecedor { get; set; }
         public string image { get; set; }
     }
