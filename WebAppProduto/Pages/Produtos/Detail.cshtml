@@ -29,5 +29,7 @@
     <a class="btn btn-outline-primary"
        asp-page="/Produtos/Edit"
        asp-route-id="@Model.Produto.ID">Editar</a>
-    <a class="btn btn-outline-danger">Deletar</a>
+    <a class="btn btn-outline-danger"
+       asp-page="/Produtos/Delete"
+       asp-route-id="@Model.Produto.ID">Deletar</a>
 </div>

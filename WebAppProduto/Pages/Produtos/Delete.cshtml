@@ -1,0 +1,19 @@
+﻿@page
+@model WebAppProduto.Pages.Produtos.DeleteModel
+@{
+}
+
+<div class="row text-center">
+    <h1>
+        Confirmação de exlcusão
+    </h1>
+</div>
+<div class="row">
+    <h3>
+        Você deseja realmente deletar o produto @Html.DisplayFor(model => model.Produto.nome)?
+    </h3>
+</div>
+<form method="post">
+    <input type="hidden" asp-for="Produto.ID" />
+    <input type="submit" value="Deletar" class="btn btn-danger" />
+</form>
