@@ -2,56 +2,53 @@
 @model WebAppProduto.Pages.Produtos.EditModel
 @{
 }
-<h1 class="text-center">Editar Produto</h1>
+<h1 class="text-center">Edite o seu Produto</h1>
 <hr />
 
 <form method="post">
     <div class="row">
         <input type="hidden" asp-for="Produto.ID" />
-        <div class="col-md-12">
+        <div class="col-md-6">
+            <div>
+                <img class="mx-auto d-block" src="@Html.DisplayFor(model => Model.Produto.image)" />
+                <label for="image" class="control-label"><b>Imagem</b></label>
+                <input type="text" class="form-control" id="imagem" name="imagem" />
+            </div>
             <div class="form-group">
-                <label asp-for="Produto.nome" class="control-label">Nome</label>
-                <input asp-for="Produto.nome" class="form-control" />
+                <p></p>
+                <label asp-for="Produto.nome" class="control-label"><b>Nome</b></label>
+                <input asp-for="Produto.nome" class="form-control" id="nome" placeholder="Insira o nome do produto" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Produto.tipo" class="control-label"><b>Tipo</b></label>
+                <input asp-for="Produto.tipo" class="form-control" id="tipo" placeholder="Insira o tipo do produto" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Produto.fornecedor" class="control-label"><b>Fornecedor</b></label>
+                <input asp-for="Produto.fornecedor" class="form-control" id="fornecedor" placeholder="Insira o fornecedor" />
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label asp-for="Produto.setor" class="control-label">Setor</label>
-                <input asp-for="Produto.setor" class="form-control" />
+                <br />
+                <br />
+                <br />
+                <br />
+                <label asp-for="Produto.setor" class="control-label"><b>Setor</b></label>
+                <input asp-for="Produto.setor" class="form-control" id="setor" placeholder="Insira o setor" />
             </div>
-        </div>
-        <div class="col-md-6">
             <div class="form-group">
-                <label asp-for="Produto.tipo" class="control-label">tipo</label>
-                <input asp-for="Produto.tipo" class="form-control" />
+                <label asp-for="Produto.local" class="control-label"><b>Local</b></label>
+                <input asp-for="Produto.local" class="form-control" id="local" placeholder="Insira o local do produto" />
             </div>
-        </div>
-        <div class="col-md-6">
             <div class="form-group">
-                <label asp-for="Produto.quantidade" class="control-label">Quantidade</label>
-                <input asp-for="Produto.quantidade" class="form-control" />
+                <label asp-for="Produto.quantidade" class="control-label"><b>Quantidade</b></label>
+                <input asp-for="Produto.quantidade" class="form-control" id="quantidade" placeholder="Insira a quantidade atual" />
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label asp-for="Produto.local" class="control-label">Local</label>
-                <input asp-for="Produto.local" class="form-control" />
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label asp-for="Produto.fornecedor" class="control-label">Fornecedor</label>
-                <input asp-for="Produto.fornecedor" class="form-control" />
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label asp-for="Produto.image" class="control-label">Imagem</label>
-                <input asp-for="Produto.image" class="form-control" />
-            </div>
-        </div>
-    </div>
-    <div class="form-group">
-        <input type="submit" value="Create" class="btn btn-primary" />
     </div>
 </form>
+
+<div class="d-flex flex-row-reverse bd-highlight">
+    <input type="submit" value="Alterar produto" class="btn btn-primary" />
+</div>

@@ -92,12 +92,12 @@ body {
 }
 #group-btn-create {
     position: relative;
-    top: 50px;
+    margin:10px;
 }
 
 #group-input-create {
     position: relative;
-    top: 10px;
+    margin: 10px;
     width: 405px;
 }
 
