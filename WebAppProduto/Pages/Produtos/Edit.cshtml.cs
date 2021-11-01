@@ -51,7 +51,7 @@ namespace WebAppProduto.Pages.Produtos
                     .PutAsJsonAsync("api/Produtos/" + Produto.ID, Produto);
                 if (response.IsSuccessStatusCode)
                 {
-                    return RedirectToPage("./Index");
+                    return RedirectToPage("./Feedbacks/Alterado");
                 }
                 else
                 {

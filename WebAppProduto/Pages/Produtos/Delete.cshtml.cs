@@ -69,7 +69,7 @@ namespace WebAppProduto.Pages.Produtos
                 if (response.IsSuccessStatusCode)
                 {
                     //Sucesso! Quero ir para a minha página http://localhost:port/Pokemons
-                    return RedirectToPage("./Index");
+                    return RedirectToPage("./Feedbacks/Exclusao");
                 }
                 else
                 {

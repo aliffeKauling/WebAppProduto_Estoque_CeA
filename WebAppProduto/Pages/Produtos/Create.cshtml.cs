@@ -29,7 +29,7 @@ namespace WebAppProduto.Pages.Produtos
                 if (response.IsSuccessStatusCode)
                 {
                     //Produtos/Index
-                    return RedirectToPage("./Index");
+                    return RedirectToPage("./Feedbacks/Criado");
                 }
                 else
                 {
