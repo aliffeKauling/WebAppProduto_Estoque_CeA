@@ -2,3 +2,15 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+
+function getComboA(selectObject) {
+    var value = selectObject.value;
+    window.location.replace("https://localhost:44310/Produtos/Edit?id=" + value);
+}
+
+function urli() {
+
+
+    var urli = "https://localhost:44310/Produtos/Edit?id=" + value;
+    return urli;
+}

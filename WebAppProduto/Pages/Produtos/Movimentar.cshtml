@@ -1,0 +1,28 @@
+﻿@page
+@model WebAppProduto.Pages.Produtos.MovimentarModel
+@{
+}
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+<h1 class="text-center">Movimente o seu produto</h1>
+<hr />
+
+<form method="post">
+    <div class="row col-md-6">
+        <select select id="comboA" onchange="getComboA(this)">
+            <option selected>Selecione</option>
+            @foreach (var data in Model.Produtos)
+            {
+
+                <option value="@data.ID">@Html.DisplayFor(modelItem => data.ID)</option>
+            }
+        </select>
+
+    </div>
+    <hr />
+    <!--<div class="row col-md-6">
+        <label asp-for="Produto.quantidade" class="control-label"><b>Quantidade</b></label>
+        <input asp-for="Produto.quantidade" class="form-control" id="quantidade" placeholder="Quantidade em estoque" />
+    </div>
+        -->
+</form>
