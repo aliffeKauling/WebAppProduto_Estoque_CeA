@@ -2,34 +2,32 @@
 @model WebAppProduto.Pages.Produtos.DetailModel
 @{
 }
-<div class="row">
-    <div class="col-md-12">
-        <img class="mx-auto d-block" src="@Html.DisplayFor(model => Model.Produto.image)"
-             alt="Imagem do @Html.DisplayFor(model => Model.Produto.nome)" />
-        <h1 class="text-center">@Html.DisplayFor(model => Model.Produto.nome)</h1>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+</button>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="card" style="width: 18rem;">
+            <img src="@Html.DisplayFor(model => Model.Produto.image)" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">@Html.DisplayFor(model => Model.Produto.nome)</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Tipo:</strong>@Html.DisplayFor(model => Model.Produto.tipo)</li>
+                <li class="list-group-item"><strong>Setor:</strong>@Html.DisplayFor(model => Model.Produto.setor)</li>
+                <li class="list-group-item"><strong>Quantidade:</strong>@Html.DisplayFor(model => Model.Produto.quantidade)</li>
+                <li class="list-group-item"><strong>Local:</strong>@Html.DisplayFor(model => Model.Produto.local)</li>
+                <li class="list-group-item"><strong>Fornecedor:</strong>@Html.DisplayFor(model => Model.Produto.fornecedor)</li>
+            </ul>
+            <div class="card-body">
+                <a class="btn btn-outline-primary"
+                   asp-page="/Produtos/Edit"
+                   asp-route-id="@Model.Produto.ID">Editar</a>
+                <a class="btn btn-outline-success"
+                   asp-page="/Produtos/Index"
+                   asp-route-id="@Model.Produto.ID">Ir para Estoque</a>
+            </div>
+        </div>
     </div>
-    <hr />
-    <div class="col-md-6">
-        <h3>Tipo: @Html.DisplayFor(model => Model.Produto.tipo)</h3>
-    </div>
-    <div class="col-md-6">
-        <h3>setor: @Html.DisplayFor(model => Model.Produto.setor)</h3>
-    </div>
-    <div class="col-md-6">
-        <h3>Quantidade: @Html.DisplayFor(model => Model.Produto.quantidade)</h3>
-    </div>
-    <div class="col-md-6">
-        <h3>Local: @Html.DisplayFor(model => Model.Produto.local)</h3>
-    </div>
-    <div class="col-md-6">
-        <h3>Fornecedor: @Html.DisplayFor(model => Model.Produto.fornecedor)</h3>
-    </div>
-</div>
-<div class="row">
-    <a class="btn btn-outline-primary"
-       asp-page="/Produtos/Edit"
-       asp-route-id="@Model.Produto.ID">Editar</a>
-    <a class="btn btn-outline-danger"
-       asp-page="/Produtos/Delete"
-       asp-route-id="@Model.Produto.ID">Deletar</a>
 </div>
