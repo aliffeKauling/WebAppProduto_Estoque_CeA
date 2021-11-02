@@ -1,33 +1,39 @@
 ﻿@page
 @model WebAppProduto.Pages.Produtos.DetailModel
 @{
+    Layout = null;
 }
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Launch demo modal
-</button>
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="card" style="width: 18rem;">
-            <img src="@Html.DisplayFor(model => Model.Produto.image)" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">@Html.DisplayFor(model => Model.Produto.nome)</h5>
-            </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item"><strong>Tipo:</strong>@Html.DisplayFor(model => Model.Produto.tipo)</li>
-                <li class="list-group-item"><strong>Setor:</strong>@Html.DisplayFor(model => Model.Produto.setor)</li>
-                <li class="list-group-item"><strong>Quantidade:</strong>@Html.DisplayFor(model => Model.Produto.quantidade)</li>
-                <li class="list-group-item"><strong>Local:</strong>@Html.DisplayFor(model => Model.Produto.local)</li>
-                <li class="list-group-item"><strong>Fornecedor:</strong>@Html.DisplayFor(model => Model.Produto.fornecedor)</li>
-            </ul>
-            <div class="card-body">
-                <a class="btn btn-outline-primary"
-                   asp-page="/Produtos/Edit"
-                   asp-route-id="@Model.Produto.ID">Editar</a>
-                <a class="btn btn-outline-success"
-                   asp-page="/Produtos/Index"
-                   asp-route-id="@Model.Produto.ID">Ir para Estoque</a>
+<div class="modal-dialog">
+    <div class="modal-content">
+        <!--Cabeçalho-->
+        <div class="modal-header">
+            <h4 class="modal-title">Detalhes do Produto</h4>
+        </div>
+        <!--Corpo - Card-->
+        <div class="modal-body">
+            <div class="card" style="width: 100%; text-align: center">
+                <img src="@Html.DisplayFor(model => Model.Produto.image)" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">@Html.DisplayFor(model => Model.Produto.nome)</h3>
+                </div>
+                <ul class="list-group list-group-">
+                    <li class="list-group-item list-group-item-secondary"><strong>Tipo: </strong>@Html.DisplayFor(model => Model.Produto.tipo)</li>
+                    <li class="list-group-item list-group-item-secondary"><strong>Setor: </strong>@Html.DisplayFor(model => Model.Produto.setor)</li>
+                    <li class="list-group-item list-group-item-secondary"><strong>Quantidade: </strong>@Html.DisplayFor(model => Model.Produto.quantidade)</li>
+                    <li class="list-group-item list-group-item-secondary"><strong>Local: </strong>@Html.DisplayFor(model => Model.Produto.local)</li>
+                    <li class="list-group-item list-group-item-secondary"><strong>Fornecedor: </strong>@Html.DisplayFor(model => Model.Produto.fornecedor)</li>
+                </ul>
             </div>
         </div>
+        <!--Footer - Botões-->
+        <div class="modal-footer">
+            <a type="button" class="btn btn-primary"
+               asp-page="/Produtos/Index">Ir para página inicial</a>
+            <a type="button" class="btn btn-outline-success"
+               asp-page="/Produtos/Edit"
+               asp-route-id="@Model.Produto.ID">Editar</a>
+        </div>
+
     </div>
 </div>
