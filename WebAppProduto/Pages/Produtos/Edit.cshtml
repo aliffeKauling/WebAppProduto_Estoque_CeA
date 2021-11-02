@@ -9,13 +9,7 @@
     <div class="row">
         <input type="hidden" asp-for="Produto.ID" />
         <div class="col-md-6">
-            <div>
-                <img class="mx-auto d-block" src="@Html.DisplayFor(model => Model.Produto.image)" />
-                <label for="image" class="control-label"><b>Imagem</b></label>
-                <input type="text" class="form-control" name="imagem" />
-            </div>
             <div class="form-group">
-                <p></p>
                 <label asp-for="Produto.nome" class="control-label"><b>Nome</b></label>
                 <input asp-for="Produto.nome" class="form-control" placeholder="Insira o nome do produto" />
             </div>
@@ -27,13 +21,7 @@
                 <label asp-for="Produto.fornecedor" class="control-label"><b>Fornecedor</b></label>
                 <input asp-for="Produto.fornecedor" class="form-control" placeholder="Insira o fornecedor" />
             </div>
-        </div>
-        <div class="col-md-6">
             <div class="form-group">
-                <br />
-                <br />
-                <br />
-                <br />
                 <label asp-for="Produto.setor" class="control-label"><b>Setor</b></label>
                 <input asp-for="Produto.setor" class="form-control" placeholder="Insira o setor" />
             </div>
@@ -46,9 +34,20 @@
                 <input asp-for="Produto.quantidade" class="form-control" placeholder="Insira a quantidade atual" />
             </div>
         </div>
+        <div class="col-6 d-flex justify-content-center flex-column">
+            <div class="container-fluid">
+                <img class="img-fluid" src="@Html.DisplayFor(model => Model.Produto.image)"
+                     style="max-width: 400px"/>
+            </div>
+            <div class="form-group">
+                <label for="image" class="control-label"><b>Alterar Imagem</b></label>
+                <input type="text" class="form-control" name="imagem" />
+            </div>
+        </div>
     </div>
     <div class="d-flex flex-row-reverse bd-highlight">
-        <input type="submit" value="Alterar produto" class="btn btn-primary" />
+        <input type="submit" value="Alterar produto" class="btn btn-primary mt-3" />
     </div>
 </form>
+
 

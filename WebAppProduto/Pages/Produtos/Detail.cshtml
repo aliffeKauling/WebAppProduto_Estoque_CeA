@@ -1,35 +1,39 @@
 ﻿@page
 @model WebAppProduto.Pages.Produtos.DetailModel
 @{
+    Layout = null;
 }
-<div class="row">
-    <div class="col-md-12">
-        <img class="mx-auto d-block" src="@Html.DisplayFor(model => Model.Produto.image)"
-             alt="Imagem do @Html.DisplayFor(model => Model.Produto.nome)" />
-        <h1 class="text-center">@Html.DisplayFor(model => Model.Produto.nome)</h1>
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <!--Cabeçalho-->
+        <div class="modal-header">
+            <h4 class="modal-title">Detalhes do Produto</h4>
+        </div>
+        <!--Corpo - Card-->
+        <div class="modal-body">
+            <div class="card" style="width: 100%; text-align: center">
+                <img src="@Html.DisplayFor(model => Model.Produto.image)" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h3 class="card-title">@Html.DisplayFor(model => Model.Produto.nome)</h3>
+                </div>
+                <ul class="list-group list-group-">
+                    <li class="list-group-item list-group-item-secondary"><strong>Tipo: </strong>@Html.DisplayFor(model => Model.Produto.tipo)</li>
+                    <li class="list-group-item list-group-item-secondary"><strong>Setor: </strong>@Html.DisplayFor(model => Model.Produto.setor)</li>
+                    <li class="list-group-item list-group-item-secondary"><strong>Quantidade: </strong>@Html.DisplayFor(model => Model.Produto.quantidade)</li>
+                    <li class="list-group-item list-group-item-secondary"><strong>Local: </strong>@Html.DisplayFor(model => Model.Produto.local)</li>
+                    <li class="list-group-item list-group-item-secondary"><strong>Fornecedor: </strong>@Html.DisplayFor(model => Model.Produto.fornecedor)</li>
+                </ul>
+            </div>
+        </div>
+        <!--Footer - Botões-->
+        <div class="modal-footer">
+            <a type="button" class="btn btn-primary"
+               asp-page="/Produtos/Index">Ir para página inicial</a>
+            <a type="button" class="btn btn-outline-success"
+               asp-page="/Produtos/Edit"
+               asp-route-id="@Model.Produto.ID">Editar</a>
+        </div>
+
     </div>
-    <hr />
-    <div class="col-md-6">
-        <h3>Tipo: @Html.DisplayFor(model => Model.Produto.tipo)</h3>
-    </div>
-    <div class="col-md-6">
-        <h3>setor: @Html.DisplayFor(model => Model.Produto.setor)</h3>
-    </div>
-    <div class="col-md-6">
-        <h3>Quantidade: @Html.DisplayFor(model => Model.Produto.quantidade)</h3>
-    </div>
-    <div class="col-md-6">
-        <h3>Local: @Html.DisplayFor(model => Model.Produto.local)</h3>
-    </div>
-    <div class="col-md-6">
-        <h3>Fornecedor: @Html.DisplayFor(model => Model.Produto.fornecedor)</h3>
-    </div>
-</div>
-<div class="row">
-    <a class="btn btn-outline-primary"
-       asp-page="/Produtos/Edit"
-       asp-route-id="@Model.Produto.ID">Editar</a>
-    <a class="btn btn-outline-danger"
-       asp-page="/Produtos/Delete"
-       asp-route-id="@Model.Produto.ID">Deletar</a>
 </div>
