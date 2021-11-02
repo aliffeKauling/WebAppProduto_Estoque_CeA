@@ -19,34 +19,53 @@
             </div>
             <div class="form-group">
                 <label asp-for="Produto.fornecedor" class="control-label"><b>Fornecedor</b></label>
-                <input asp-for="Produto.fornecedor" class="form-control" placeholder="Insira o fornecedor" />
+                <!--<input type="text" class="form-control" id="fornecedor" name="fornecedor" placeholder=""/>-->
+                <select class="custom-select col-12" aria-label="Selecione o fornecedor" asp-for="Produto.fornecedor" required>
+                    <option label="Selecione"></option>
+                    <option value="Moda Atacado LTDA">Moda Atacado LTDA</option>
+                    <option value="Allied Express">Allied Express</option>
+                    <option value="Kaisan Moda">Kaisan Moda</option>
+                </select>
             </div>
             <div class="form-group">
-                <label asp-for="Produto.setor" class="control-label"><b>Setor</b></label>
-                <input asp-for="Produto.setor" class="form-control" placeholder="Insira o setor" />
+                <label for="setor" class="control-label"><b>Setor</b></label>
+                <select class="custom-select col-12" aria-label="Selecione o departamento" asp-for="Produto.setor" required>
+                    <option label="Selecione"></option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Infantil">Infantil</option>
+                </select>
             </div>
             <div class="form-group">
                 <label asp-for="Produto.local" class="control-label"><b>Local</b></label>
                 <input asp-for="Produto.local" class="form-control" placeholder="Insira o local do produto" />
             </div>
-            <div class="form-group">
-                <label asp-for="Produto.quantidade" class="control-label"><b>Quantidade</b></label>
-                <input asp-for="Produto.quantidade" class="form-control" placeholder="Insira a quantidade atual" />
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label asp-for="Produto.codigo" class="control-label"><b>Código</b></label>
+                    <input asp-for="Produto.codigo" class="form-control" placeholder="Cód" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label asp-for="Produto.quantidade" class="control-label"><b>Quantidade</b></label>
+                    <input asp-for="Produto.quantidade" class="form-control" placeholder="Insira a quantidade atual" />
+                </div>
             </div>
         </div>
-        <div class="col-6 d-flex justify-content-center flex-column">
-            <div class="container-fluid">
-                <img class="img-fluid" src="@Html.DisplayFor(model => Model.Produto.image)"
-                     style="max-width: 400px"/>
-            </div>
+        <div class="col-md-6">
             <div class="form-group">
-                <label for="image" class="control-label"><b>Alterar Imagem</b></label>
-                <input type="text" class="form-control" name="imagem" />
+                <div class="container-fluid d-flex justify-content-center">
+                    <img class="img-fluid" src="@Html.DisplayFor(model => Model.Produto.image)"
+                         style="width: 400px" />
+                </div>
+                <div class="form-group">
+                    <label for="image" class="control-label"><b>Alterar Imagem</b></label>
+                    <input type="text" class="form-control" asp-for="Produto.image" />
+                </div>
+                <div class="d-flex flex-row-reverse bd-highlight">
+                    <input type="submit" value="Alterar produto" class="btn btn-primary mt-3" />
+                </div>
             </div>
         </div>
-    </div>
-    <div class="d-flex flex-row-reverse bd-highlight">
-        <input type="submit" value="Alterar produto" class="btn btn-primary mt-3" />
     </div>
 </form>
 

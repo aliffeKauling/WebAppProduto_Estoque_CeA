@@ -15,5 +15,6 @@ namespace WebAppProduto.Models
         public int quantidade { get; set; }
         public string fornecedor { get; set; }
         public string image { get; set; }
+        public int codigo { get; set; } 
     }
 }
