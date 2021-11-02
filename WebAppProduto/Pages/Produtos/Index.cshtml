@@ -2,18 +2,20 @@
 @model WebAppProduto.Pages.Produtos.IndexModel
 @{
 }
-@section scripts{
-    <script>
-        $(function () {
-            $(".details").click(function () {
-                var id = $(this).attr("data-id");
-                $("#modal").load("Produtos/Detail?id=" + id, function () {
-                    $("#modal").modal();
-                })
-            });
-        })
-    </script>
+
+@section scripts{ 
+<script>
+    $(function () {
+        $(".details").click(function () {
+            var id = $(this).attr("data-id");
+            $("#modal").load("Produtos/Detail?id=" + id, function () {
+                $("#modal").modal();
+            })
+        });
+    })
+</script>
 }
+
 
 <div class="modal" tabindex="-1" id="modal">
 
@@ -29,7 +31,7 @@
             <a class="btn btn-outline-success"
                asp-area="" asp-page="/Produtos/Create">Novo Produto</a>
             <a class="btn btn-outline-dark"
-               asp-area="" asp-page="/Produtos/Create">Movimentar Produto</a>
+               asp-area="" asp-page="/Produtos/Index">Movimentar Produto</a>
         </div>
 
 
@@ -46,7 +48,7 @@
                     <table class="table" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>ID</th>
+                                <th>Código</th>
                                 <th>Nome</th>
                                 <th>Tipo</th>
                                 <th>Setor</th>
@@ -62,7 +64,7 @@
                         {
                             <tbody>
                                 <tr>
-                                    <td>@Html.DisplayFor(modelItem => data.ID)</td>
+                                    <td>@Html.DisplayFor(modelItem => data.codigo)</td>
                                     <td>@Html.DisplayFor(modelItem => data.nome)</td>
                                     <td>@Html.DisplayFor(modelItem => data.tipo)</td>
                                     <td>@Html.DisplayFor(modelItem => data.setor)</td>
