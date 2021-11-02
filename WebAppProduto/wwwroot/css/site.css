@@ -106,3 +106,21 @@ body {
     margin:0;
 
 }
+
+.logo-intro {
+    color: #ef5da8;
+    font-size: 6em;
+}
+
+.label-login{
+    font-weight: bold;
+}
+
+.sub-logo {
+    border: 1 px solid #5d5fef;
+    padding: 10 px;
+    font-size: 1.5em;
+    border-radius: 10 px;
+    color: #5d5fef!important;
+}
+
