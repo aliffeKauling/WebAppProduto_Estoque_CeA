@@ -14,9 +14,14 @@ namespace WebAppProduto.Pages.Produtos
     public class IndexModel : PageModel
     {
         public List<Produto> Produtos { get; private set; }
-        string baseUrl = "https://localhost:44369/";
-        public async Task OnGetAsync()
+        string baseUrl = "https://localhost:5001/";
+
+        public async Task<IActionResult> OnGetAsync()
         {
+            //verifica autenticação
+            if (!HttpContext.User.Identity.IsAuthenticated)
+                return Redirect("/Login");
+
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(baseUrl);
@@ -31,6 +36,7 @@ namespace WebAppProduto.Pages.Produtos
                     Produtos = JsonConvert.DeserializeObject<List<Produto>>(result);
                 }
             }
+            return Page();
         }
     }
 }
