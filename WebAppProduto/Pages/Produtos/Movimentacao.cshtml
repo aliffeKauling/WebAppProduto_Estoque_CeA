@@ -13,10 +13,13 @@
                 <input asp-for="Produto.nome" class="form-control" placeholder="Insira o nome do produto" readonly />
             </div>
         </div>
+        <div class="form-group">
+            <input asp-for="Produto.ID" type="hidden" class="form-control" placeholder="Insira o ID do seu produto"  />
+        </div>
         <div class="col-md-12">
             <div class="form-group">
-                <label asp-for="Produto.ID" class="control-label"><b>Identificador</b></label>
-                <input asp-for="Produto.ID" class="form-control" placeholder="Insira o ID do seu produto" readonly />
+                <label asp-for="Produto.codigo" class="control-label"><b>Código</b></label>
+                <input type="text" asp-for="Produto.codigo" class="form-control" placeholder="Cód" readonly/>
             </div>
         </div>
         <div class="col-md-12">
@@ -47,7 +50,9 @@
             </div>
         </div>
         <div class="d-flex flex-wrap justify-content-end" id="group-btn-create">
-            <button type="button" class="btn btn-secondary mr-3">Voltar</button>
+            <a class="btn btn-secondary mr-3"
+               asp-area=""
+               asp-page="/Produtos/Index">Voltar</a>
             <input onclick="calcula()" type="submit" value="Confirmar" class="btn btn-success" />
         </div>
     </form>

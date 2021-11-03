@@ -24,7 +24,7 @@ namespace WebAppProduto.Pages.Login
         [BindProperty]
         public Usuario Usuario { get; set; }
 
-        string baseUrl = "https://localhost:5001/";
+        string baseUrl = "https://localhost:44369/";
         public async Task<IActionResult> OnPostAsync()
         {
             using (var client = new HttpClient())
