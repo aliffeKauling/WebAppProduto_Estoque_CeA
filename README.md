@@ -9,9 +9,9 @@ Nilwan Grisosti
 Rafael Santos
 Thiago Santos
 
-#Aplicação para gestão de estoque C&A Estoque
+# Aplicação para gestão de estoque C&A Estoque
 
-#Processo:
+# Processo:
 Figma: https://www.figma.com/file/ZgxvrIavSX6EAM0NDPfXEP/InfiniteDev-team-library?node-id=0%3A1
 <br>
 Noton: https://www.notion.so/2ecbe75ecc4d46bebff676173e276736?v=52f58d229b084eb08127fb0e2e206d4e
@@ -21,7 +21,7 @@ https://miro.com/app/board/o9J_lp2ZUPc=/
 
 
 
-#Pontos de Melhoria do Projeto
+# Pontos de Melhoria do Projeto
 
 
 
