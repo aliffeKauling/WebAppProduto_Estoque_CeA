@@ -2,20 +2,13 @@
 @model WebAppProduto.Pages.Produtos.IndexModel
 @{
 }
-@section scripts{
-    <script>
-        $(function () {
-            $(".details").click(function () {
-                var id = $(this).attr("data-id");
-                $("#modal").load("Produtos/Detail?id=" + id, function () {
-                    $("#modal").modal();
-                })
-            });
-        })
-    </script>
-}
+
 
 <div class="modal" tabindex="-1" id="modal">
+
+</div>
+
+<div class="modal" tabindex="-1" id="modal-movimentar">
 
 </div>
 
@@ -28,8 +21,8 @@
         <div class="col-lg-12" style="text-align: left; padding-bottom: 1.5rem;">
             <a class="btn btn-outline-success"
                asp-area="" asp-page="/Produtos/Create">Novo Produto</a>
-            <a class="btn btn-outline-dark"
-               asp-area="" asp-page="/Produtos/Movimentar">Movimentar Produto</a>
+            <a class="btn btn-outline-dark movimentar"
+               data-toggle="modal" data-target="#exampleModal">Movimentar Produto</a>
         </div>
     </div>
     <section class="d-flex">
