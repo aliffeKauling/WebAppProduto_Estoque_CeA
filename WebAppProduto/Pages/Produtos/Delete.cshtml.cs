@@ -1,15 +1,19 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using WebAppProduto.Models;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Newtonsoft.Json;
+using WebAppProduto.Models;
+
+
 
 namespace WebAppProduto.Pages.Produtos
 {
-    public class EditModel : PageModel
+    public class DeleteModel : PageModel
     {
         [BindProperty]
         public Produto Produto { get; set; }
@@ -29,9 +33,12 @@ namespace WebAppProduto.Pages.Produtos
                     new MediaTypeWithQualityHeaderValue("application/json"));
                 HttpResponseMessage response = await client.GetAsync("api/Produtos/" + id);
 
+                //Booleano que nos diz se deu certo ou se teve algum erro
                 if (response.IsSuccessStatusCode)
                 {
+                    //Captura a string do json
                     string result = response.Content.ReadAsStringAsync().Result;
+                    //Tranformar a string json em um objeto do tipo Pokemon
                     Produto = JsonConvert.DeserializeObject<Produto>(result);
                 }
             }
@@ -39,8 +46,18 @@ namespace WebAppProduto.Pages.Produtos
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync(int? id)
         {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            if (Produto.ID != id)
+            {
+                return BadRequest();
+            }
+
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(baseUrl);
@@ -48,10 +65,11 @@ namespace WebAppProduto.Pages.Produtos
                 client.DefaultRequestHeaders.Accept.Add(
                     new MediaTypeWithQualityHeaderValue("application/json"));
                 HttpResponseMessage response = await client
-                    .PutAsJsonAsync("api/Produtos/" + Produto.ID, Produto);
+                    .DeleteAsync("api/Produtos/" + Produto.ID);
                 if (response.IsSuccessStatusCode)
                 {
-                    return RedirectToPage("./Feedbacks/Alterado");
+                    //Sucesso! Quero ir para a minha página http://localhost:port/Pokemons
+                    return RedirectToPage("./Feedbacks/Exclusao");
                 }
                 else
                 {

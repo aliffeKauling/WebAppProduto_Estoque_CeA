@@ -1,0 +1,24 @@
+﻿@page
+@model WebAppProduto.Pages.Produtos.DeleteModel
+@{
+}
+<div class="card">
+    <div class="card-header">
+        Excluir Produto
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">
+            Confirmação de exclusão
+        </h5>
+
+        
+        <p class="card-text">
+            Você deseja realmente deletar o produto @Html.DisplayFor(model => model.Produto.nome)?
+        </p>
+
+        <form method="post">
+            <input type="hidden" asp-for="Produto.ID" />
+            <input type="submit" value="Deletar" class="btn btn-danger" />
+        </form>
+    </div>
+</div>
