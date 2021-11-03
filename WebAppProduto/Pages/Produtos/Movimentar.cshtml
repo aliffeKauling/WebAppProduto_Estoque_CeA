@@ -1,0 +1,33 @@
+﻿@page
+@model WebAppProduto.Pages.Produtos.MovimentarModel
+@{ Layout = null;
+}
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+<h1 class="text-center">Movimente o seu produto</h1>
+<hr />
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <!--Cabeçalho-->
+        <div class="modal-header">
+            <h4 class="modal-title">Selecione o ID do seu produto</h4>
+        </div>
+        <!--Corpo - Card-->
+        <div class="modal-body">
+            <form method="post">
+                <div class="row col-md-8">
+                    <select class="row col-md-8" select id="comboA" onchange="getComboA(this) ">
+                        <option selected>Selecione</option>
+                        @foreach (var data in Model.Produtos)
+                        {
+
+                            <option value="@data.codigo">@Html.DisplayFor(modelItem => data.codigo)</option>
+                        }
+                    </select>
+                </div>
+                <hr />
+            </form>
+        </div>
+    </div>
+</div>

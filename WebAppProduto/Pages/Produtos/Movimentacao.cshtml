@@ -1,0 +1,54 @@
+﻿@page
+@model WebAppProduto.Pages.Produtos.MovimentacaoModel
+@{
+}
+<h1 class="text-center">Movimente o seu produto</h1>
+<hr />
+<div class="d-flex flex-wrap justify-content-center">
+    <form method="post" class="col-md-8">
+        <input type="hidden" asp-for="Produto.ID" />
+        <div class="col-md-6">
+            <div class="form-group">
+                <label asp-for="Produto.nome" class="control-label"><b>Nome</b></label>
+                <input asp-for="Produto.nome" class="form-control" placeholder="Insira o nome do produto" readonly />
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label asp-for="Produto.ID" class="control-label"><b>Identificador</b></label>
+                <input asp-for="Produto.ID" class="form-control" placeholder="Insira o ID do seu produto" readonly />
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label asp-for="Produto.quantidade" class="control-label"><b>Quantidade em estoque</b></label>
+                <input id="resultado" asp-for="Produto.quantidade" class="form-control" readonly />
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="hidden" asp-for="Produto.tipo" class="form-control" placeholder="Insira o tipo do produto" />
+        </div>
+        <div class="form-group">
+            <input type="hidden" asp-for="Produto.fornecedor" class="form-control" placeholder="Insira o fornecedor" />
+        </div>
+        <div class="form-group">
+            <input type="hidden" asp-for="Produto.setor" class="form-control" placeholder="Insira o setor" />
+        </div>
+        <div class="form-group">
+            <input type="hidden" asp-for="Produto.local" class="form-control" placeholder="Insira o local do produto" />
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <select class="custom-select" select id="comboB" onchange="getComboB(this)">
+                    <option value="1" selected>Movimentação de entrada</option>
+                    <option value="2">Movimentação de saida</option>
+                </select>
+                <input type="number" class="form-control mt-3" id="novaquantidade" placeholder="Insira a quantidade alterada" required />
+            </div>
+        </div>
+        <div class="d-flex flex-wrap justify-content-end" id="group-btn-create">
+            <button type="button" class="btn btn-secondary mr-3">Voltar</button>
+            <input onclick="calcula()" type="submit" value="Confirmar" class="btn btn-success" />
+        </div>
+    </form>
+</div>
