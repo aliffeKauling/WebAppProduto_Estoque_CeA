@@ -2,14 +2,14 @@
 @model WebAppProduto.Pages.Produtos.CreateModel
 @{
 }
-<h1>Produto</h1>
 
+<h1 class="text-center">Cadastro de Produto</h1>
 
 <form method="post">
     <!-- Container formulário -->
-    <div class="row g-3">
+    <div class="row d-flex justify-content-center box-shadow">
         <!--Coluna 1-->
-        <div class="col-md-6 row g-3">
+        <div class="col-md-8 row g-3">
             <!--Campo nome-->
             <div class="col-12">
                 <div class="form-group">
@@ -66,35 +66,23 @@
             <div class="col-md-4">
                 <div class="form-group">
                     <label for="codigo" class="control-label">Código</label>
-                    <input type="number" class="form-control" id="codigo" name="codigo" placeholder="Cód"/>
+                    <input type="number" class="form-control" id="codigo" name="codigo" placeholder="Cód" />
                 </div>
             </div>
-
-        </div>
-
-        <!--Coluna 2-->
-        <div class="col-md-6">
-            <!--Container geral-->
-            <div class="row .g3">
-                <!--Container imagens-->
-                <div class="d-flex flex-wrap justify-content-center">
-                    <div class="images-create img-fluid"></div>
-                    <div class="images-create img-fluid"></div>
-                    <div class="images-create img-fluid"></div>
-                    <div class="images-create img-fluid"></div>
-                </div>
-                <!--Container Enviar arquivo IMAGEM-->
-                <div class="form-group col-12">
-                     <label for="tipo" class="control-label">Imagem</label>
-                     <input type="text" class="form-control" id="image" name="image" placeholder="Insira a URL da imagem" />
-                </div>
-                <!--Botões Inferiores-->
-                <div class="col-11 d-flex flex-wrap justify-content-end" id="group-btn-create">
-                    <button type="button" class="btn btn-outline-danger btn-deletar-create">Deletar</button>
-                    <input type="submit" value="Criar" class="btn btn-success" />
-                </div>
+            <!--Container Enviar arquivo IMAGEM-->
+            <div class="form-group col-12">
+                <label for="tipo" class="control-label">Imagem</label>
+                <input type="text" class="form-control" id="image" name="image" placeholder="Insira a URL da imagem" />
             </div>
+            <!--Botões Inferiores-->
+            <div class="col-12 d-flex flex-wrap justify-content-end" id="group-btn-create">
+                <a class="btn btn-secondary mr-3"
+                   asp-area=""
+                   asp-page="/Produtos/Index">Cancelar</a>
+                <input type="submit" value="Criar" class="btn btn-success" />
+            </div>
+
         </div>
     </div>
-   
+
 </form>

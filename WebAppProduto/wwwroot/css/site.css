@@ -68,7 +68,8 @@ html {
 body {
     /* Margin bottom by footer height */
     margin-bottom: 60px;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f7f7f7;
 }
 .footer {
   position: absolute;
@@ -110,17 +111,26 @@ body {
 .logo-intro {
     color: #ef5da8;
     font-size: 6em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }
 
-.label-login{
+.label-login {
     font-weight: bold;
 }
 
 .sub-logo {
-    border: 1 px solid #5d5fef;
-    padding: 10 px;
-    font-size: 1.5em;
-    border-radius: 10 px;
-    color: #5d5fef!important;
+    font-size: 1.2em;
+    border-radius: 10px;
+    color: #5D5FEF;
+    border: 1px solid #5D5FEF;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.btn-login {
+    background: #5D5FEF;
+    width: 100%;
 }
 

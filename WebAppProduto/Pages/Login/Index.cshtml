@@ -1,11 +1,13 @@
-﻿@page
+﻿@page "/"
 @model WebAppProduto.Pages.Login.IndexModel
 @{
     Layout = "~/Pages/Shared/_LayoutLogin.cshtml";
 }
 
-<h1 class="logo-intro text-center">C&A</h1>
-<p class="sub-logo text-center">Estoque</p>
+<div class="container text-center">
+    <h1 class="logo-intro text-center">C&A</h1>
+    <small class="sub-logo text-center">Estoque</small>
+</div>
 
 <div class="container">
     <div class="row d-flex flex-wrap justify-content-center">
@@ -14,14 +16,13 @@
                 <div class="form-group">
                     <label class="label-login">Usuário</label>
                     <input type="text" name="name" class="form-control" aria-describedby="emailHelp" placeholder="Usuário">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="form-group">
                     <label class="label-login">Senha</label>
                     <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Senha">
                 </div>
 
-                <button type="submit" class="btn btn-primary">Entrar</button>
+                <button type="submit" class="btn btn-primary btn-login">Entrar</button>
             </form>
         </div>
     </div>
