@@ -44,7 +44,7 @@ Noton: https://www.notion.so/2ecbe75ecc4d46bebff676173e276736?v=52f58d229b084eb0
 
 
 - Divisão do trabalho<br>
-Tendo em mente que equipe participava da aceleração para desenvolverodes Full Stack e também olhando para os fundamentos do ágil, a equipe tomou por decisão em realizar uma divisão onde toad a equipe participou de todas as etapas do projeto. A equipe esbanjou 
+Tendo em mente que equipe participava da aceleração para desenvolverodes Full Stack e também olhando para os fundamentos do ágil, a equipe tomou por decisão em realizar uma divisão onde toad a equipe participou de todas as etapas do projeto. A equipe esbanjou em codar em tempo real. 
 #
 
 ### ![Group 12 (2)](https://user-images.githubusercontent.com/75868001/140383201-c67d88db-cf57-4e04-94ac-b6fc53fb1578.png) Planejamento e construção telas Front End
