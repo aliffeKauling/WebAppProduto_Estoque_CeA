@@ -18,14 +18,14 @@ A aplicação é munida de ferramentas que visam facilitar a organização das m
 
 
 ## ![Group 13 (1)](https://user-images.githubusercontent.com/75868001/140382124-41d3abe1-53c9-4c95-8d63-ac11722cc32e.png) Etapas e processo:
-A equipe formada por sete alunos da aceleração da Gama Academy, buscou implementar os conceitos de metodologia áil, mais especificamente, aplicando a metodologia Scrum e Kamban para auxiliar na gestão das tarefas.
+A equipe formada por sete alunos da aceleração da Gama Academy, buscou implementar os conceitos de metodologia ágil, mais especificamente, aplicando a metodologia Scrum e Kamban para auxiliar na gestão das tarefas.
 
 
 #### Visão de produto
-Definio-se a visão de produto que consistia em desenvolver uma aplicação de gestão de estoque voltada para o varejo de roupas, capaz facilitar a organização das mercadorias, acompanhar o que entra e o que sai da loja, evitar que o comerciante venda algo que já acabou e que ao final fosse algo que pudesse ser aplicado em um contexto real. 
+DefiniU-se a visão de produto que consistia em desenvolver uma aplicação de gestão de estoque voltada para o varejo de roupas, capaz facilitar a organização das mercadorias, acompanhar o que entra e o que sai da loja, evitar que o comerciante venda algo que já acabou e que ao final fosse algo que pudesse ser aplicado em um contexto real. 
 
 #### Backlog
-Tendo a visão de produto, a equipe então realizou duas reuniões. A primeira voltada para levandar hard skils dos membros da equipe e a segunda para o planejamento do backlog própriamente dito. <br>
+Tendo a visão de produto, a equipe então realizou duas reuniões. A primeira voltada para levanTar hard skils dos membros da equipe e a segunda para o planejamento do backlog própriamente dito. <br>
 - Planejamento de backlog.<br>
 Para construção do backlog, a equipe tomou o contexto da visão de produto e inicialmente aplicou o [Design baseado em cenários e histórias](https://catarinasdesign.com.br/a-influencia-dos-cenarios-na-experiencia-do-usuario/).<br>
 
@@ -35,24 +35,24 @@ Os user stories podem ser encontrados no link abaixo:<br>
 Miro: https://miro.com/app/board/o9J_lp2ZUPc=/
 
 #### Sprint
-Com o backlog pronto, aequipe então realizou a sprint plan.
+Com o backlog pronto, a equipe então realizou a sprint plan.
 
 - Tasks<br>
-No sprint plan, levantou-se as tasks e estas foram organizadas em quadro com a metodologia kamban e através da ferramenta Notion, a equipe buscou organização e tracking das atividades de cada membro.<br>
+No sprint plan, levantou-se as tasks e estas foram organizadas em quadro com a metodologia kamban. Através da ferramenta Notion, a equipe buscou organização e tracking das atividades de cada membro.<br>
 O Kamban pode ser encontrado no link abaixo:<br>
 Noton: https://www.notion.so/2ecbe75ecc4d46bebff676173e276736?v=52f58d229b084eb08127fb0e2e206d4e
 
 
 - Divisão do trabalho<br>
-Tendo em mente que equipe participava da aceleração para desenvolverodes Full Stack e também olhando para os fundamentos do ágil, a equipe tomou por decisão em realizar uma divisão onde toad a equipe participou de todas as etapas do projeto. A equipe esbanjou em codar em tempo real. 
+Tendo em mente que equipe participava da aceleração para desenvolvedores(as) Full Stack e também olhando para os fundamentos do ágil, a equipe tomou por decisão em realizar uma divisão onde toda a equipe participou de todas as etapas do projeto. A equipe esbanjou em codar em tempo real. 
 #
 
 ### ![Group 12 (2)](https://user-images.githubusercontent.com/75868001/140383201-c67d88db-cf57-4e04-94ac-b6fc53fb1578.png) Planejamento e construção telas Front End
 
-Utilizando-se de conhecimentos de UI e no que jpa havia sido levantado utilizando-se de UX, a equipe desenhou a jornada do usuário e após iniciou os rabiscos dos wireframes que posteriormente, após validados, foram transformados em protótipos.
+Utilizando-se de conhecimentos de UI e no que já havia sido levantado utilizando-se de UX, a equipe desenhou a jornada do usuário e em seguida iniciou os rabiscos dos wireframes que posteriormente, após validados, foram transformados em protótipos.
 
 - Protótipos<br>
-Os protótipos foram desenhados e validados atravpes da ferramenta Figma, onde geraram o Style Guide e utilizou-se da biblioteca Bootstrap, já que a equipe já virará o comportamento responsivo e a padronização.<br>
+Os protótipos foram desenhados e validados através da ferramenta Figma, onde geraram o Style Guide e utilizou-se da biblioteca Bootstrap, já que a equipe já visará o comportamento responsivo e a padronização.<br>
 Nesse momento também foram observados os [princípios de disign de Don Norman](https://uxdesign.blog.br/don-norman-e-seus-princ%C3%ADpios-de-design-fe063669184d).<br>
 O protótipo pode ser encontrado abaixo:<br>
 Figma: https://www.figma.com/file/ZgxvrIavSX6EAM0NDPfXEP/InfiniteDev-team-library?node-id=0%3A1<br>
@@ -67,7 +67,7 @@ Figma: https://www.figma.com/file/ZgxvrIavSX6EAM0NDPfXEP/InfiniteDev-team-librar
 
 ### ![Group 12 (1)](https://user-images.githubusercontent.com/75868001/140382619-d9e34a4e-6cbd-4166-b9cc-cbe4c115bef9.png) DDD Driven Domain Design
 
-A equipe também fez uso do design baseado em domínios onde a travpes das etapas iniciais, identificou os domínios Produto e Usuário e os Bound Context Domínio em estoque e usuário em TI.
+A equipe também fez uso do design baseado em domínios onde a través das etapas iniciais, identificou os domínios Produto e Usuário e os Bound Context Domínio em estoque e usuário em TI.
 
 ![dominio](https://user-images.githubusercontent.com/75868001/140373880-79e6e064-e2b5-4047-8a97-5ca7da6df837.jpg)
 
@@ -78,7 +78,7 @@ Tendo os domínios mapeados e passado da fase de DDD tático, modelou-se então 
 ![modelagem](https://user-images.githubusercontent.com/75868001/140374326-cc8a9ec5-3382-4b54-9ed9-6661be686ded.jpg)
 
 
-## Requisitos técinicos considerados
+## Requisitos técinicos considerados no projeto
 - Criação do banco de dados em MySQL modelado na fase de planejamento;
 - Desenvolvimento da API de CRUD da aplicação;
 - Desenvolvimento das telas desenhadas na fase de planejamento;
@@ -97,9 +97,9 @@ https://github.com/nilwandjg/ApiWeb_Produto_Estoque_CeA
 
 1. Implementação da caixa de pesquisa (por “nome”, por exemplo) para facilitar a busca por produtos cadastrados no estoque;
 
-2. Tratar fornecedores, setores e locais como objetos para melhor gestão.
-2.1 Funcionalidade para inclusão de fornecedores. Tratar fornecedores como um objeto e assim associar nos produtos.
-2.2 Funcionalidade para permitir o cadastro de setores.Tratar setores como um objeto e assim associar nos produtos.
+2. Tratar fornecedores, setores e locais como objetos para melhor gestão.<br>
+2.1 Funcionalidade para inclusão de fornecedores. Tratar fornecedores como um objeto e assim associar nos produtos.<br>
+2.2 Funcionalidade para permitir o cadastro de setores.Tratar setores como um objeto e assim associar nos produtos.<br>
 2.3 Funcionalidade para cadastro de locais de armazenamento.
 
 Dessa maneira estariam isolados permitindo a melhor gestão destes de maneira separada ao produto.
