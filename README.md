@@ -78,6 +78,13 @@ Tendo os domínios mapeados e passado da fase de DDD tático, modelou-se então 
 ![modelagem](https://user-images.githubusercontent.com/75868001/140374326-cc8a9ec5-3382-4b54-9ed9-6661be686ded.jpg)
 
 
+### ![Group 12 (1)](https://user-images.githubusercontent.com/75868001/140382619-d9e34a4e-6cbd-4166-b9cc-cbe4c115bef9.png) Endpoint de API
+
+Partiu-se então para o planejamento dos endpoints de APIs a ser consumidos pelo frontend. Este pode ser visto abaixo:
+
+![api](https://user-images.githubusercontent.com/75868001/140960524-c9757d7e-204e-4cd8-b566-72d6f4667303.jpg)
+
+
 ## Requisitos técinicos considerados no projeto
 - Criação do banco de dados em MySQL modelado na fase de planejamento;
 - Desenvolvimento da API de CRUD da aplicação;
@@ -87,11 +94,20 @@ Tendo os domínios mapeados e passado da fase de DDD tático, modelou-se então 
 ![Stacks utilizadas](https://user-images.githubusercontent.com/75868001/140376336-7989d237-8208-4175-91de-596b485aa361.png)
 
 
-
 ## Backend
 
 Repositório:<br>
 https://github.com/nilwandjg/ApiWeb_Produto_Estoque_CeA
+
+
+## Funcionalidades entregues
+- Criação, edição e exclusão de produtos;
+- Movimentação de entrada e saída de produtos no estoque;
+- Login, autenticação e logout;
+- Monitoramento do estoque.
+
+![vedeo](https://user-images.githubusercontent.com/75868001/140961510-c30c7f39-3413-4b25-8ef2-437be592337e.gif)
+
 
 # Pontos de Melhoria do Projeto
 
