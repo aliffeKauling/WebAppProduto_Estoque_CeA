@@ -22,7 +22,7 @@ A equipe formada por sete alunos da aceleração da Gama Academy, buscou impleme
 
 
 #### Visão de produto
-DefiniU-se a visão de produto que consistia em desenvolver uma aplicação de gestão de estoque voltada para o varejo de roupas, capaz facilitar a organização das mercadorias, acompanhar o que entra e o que sai da loja, evitar que o comerciante venda algo que já acabou e que ao final fosse algo que pudesse ser aplicado em um contexto real. 
+Definiu-se a visão de produto que consistia em desenvolver uma aplicação de gestão de estoque voltada para o varejo de roupas, capaz facilitar a organização das mercadorias, acompanhar o que entra e o que sai da loja, evitar que o comerciante venda algo que já acabou e que ao final fosse algo que pudesse ser aplicado em um contexto real. 
 
 #### Backlog
 Tendo a visão de produto, a equipe então realizou duas reuniões. A primeira voltada para levanTar hard skils dos membros da equipe e a segunda para o planejamento do backlog própriamente dito. <br>
